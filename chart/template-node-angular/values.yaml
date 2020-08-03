@@ -25,6 +25,9 @@ ingress:
     # web or app - https://cloud.ibm.com/docs/services/appid?topic=appid-kube-auth
     requestType: web
 
+route:
+  enabled: false
+
 #  host: hello
   namespaceInHost: true
   subdomain: containers.appdomain.cloud
