@@ -4,6 +4,7 @@
 global: {}
 
 replicaCount: 1
+logLevel: "debug"
 
 image:
   repository: replace
@@ -18,6 +19,9 @@ service:
   type: ClusterIP
   port: 80
 
+route:
+  enabled: false
+
 ingress:
   enabled: true
   appid:
@@ -25,12 +29,19 @@ ingress:
     # web or app - https://cloud.ibm.com/docs/services/appid?topic=appid-kube-auth
     requestType: web
 
-route:
-  enabled: false
-
 #  host: hello
   namespaceInHost: true
   subdomain: containers.appdomain.cloud
   path: "/"
 
 #  tlsSecretName: ""
+
+vcsInfo:
+  repoUrl: ""
+  branch: ""
+
+partOf: ""
+
+connectsTo: ""
+
+runtime: js
