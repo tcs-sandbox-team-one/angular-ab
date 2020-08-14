@@ -6,8 +6,8 @@ RUN mkdir client
 COPY --chown=default:root client client
 COPY client/package*.json client/
 COPY package*.json ./
-RUN npm ci
-RUN cd client && npm ci
+RUN npm run build
+RUN cd client && npm run build
 
 RUN npm run build
 
